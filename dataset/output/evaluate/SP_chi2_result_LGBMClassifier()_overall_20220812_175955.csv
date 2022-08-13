@@ -1,0 +1,6 @@
+,score
+Model,LGBMClassifier()
+K_best,3000
+Macro-F1,0.7650786680418131
+Macro-P,0.8877739200690021
+Macro-R,0.8154621848739495

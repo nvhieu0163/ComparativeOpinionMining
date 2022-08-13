@@ -1,0 +1,6 @@
+,score
+Model,<model.ACmodel.AspectClassificationModel object at 0x00000198B07D2BF0>
+K_best,3000
+Macro-F1,0.91798619490185
+Macro-P,0.9060859540225152
+Macro-R,0.9304464285714286

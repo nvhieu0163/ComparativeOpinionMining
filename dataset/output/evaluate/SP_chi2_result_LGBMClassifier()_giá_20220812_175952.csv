@@ -1,0 +1,6 @@
+,score
+Model,LGBMClassifier()
+K_best,3000
+F1 negative,0.9375000000000001
+F1 positive,0.9454545454545454
+F1 neutral,1.0
