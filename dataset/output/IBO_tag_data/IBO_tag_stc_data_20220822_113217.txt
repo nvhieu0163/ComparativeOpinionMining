@@ -1,0 +1,11 @@
+15	ngược_lại	với	đối_thủ	,	kia	sorento	hơi	thất_thế	bởi	nội_thất	của	xe	không	quá	ấn_tượng	0	0	3	0	1	2	0	0	0	0	0	0	0	0	0
+30	nhìn_chung	,	ở	phân	khúc	hạng	a	,	những	thiết_kế	trên	Kia_Morning	2020	chủ_yếu	ở	mức	cơ_bản	và	với	mức	giá	rẻ	,	người	dùng	cũng	khó	có_thể	đòi_hỏi	hơn	0	0	0	0	0	0	0	0	0	0	0	1	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+25	trong	khi	phía	đối_thủ	,	mitsubishi	xpander	cho	thấy	kích_thước	bề_thế	của	một	chiếc	mpv	chính_hiệu	khi	sở_hữu	kích_thước	4.475	x	1.750	x	1.700	mm	0	0	0	0	0	1	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+36	các	kích_thước	của	ciaz	đều	nhỉnh	hơn	hẳn	sunny	,	đồng_thời	suzuki	vẫn	đảm_bảo	khả_năng	xoay_trở	và	sự	cơ_động	nhờ	bán_kính	quay_vòng	5,40	mét	kết_hợp	cùng	khoảng	sáng	gầm	tốt	nhất	phân	khúc	–	160	mm	0	0	0	1	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+27	về	trang_bị	an_toàn	,	mẫu	xe	hàn	quốc_thể_hiện	sự	vượt_trội	so	với	đối_thủ	khi	có	tới	6	túi	khí	(	cruze	chỉ	có	4	túi	khí	)	0	0	0	0	1	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+29	đặc_biệt	,	chiều	dài	trục	cơ_sở	của	kia	seltos	lớn	hơn	10	mm	so	với	kona	,	mang	đến	khoảng	để	chân	thoải_mái	hơn	cho	cả	hai	hàng	ghế	0	0	0	0	0	0	0	1	2	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0
+21	suzuki	xl7	2020	nổi_bật	hơn	các	đối_thủ	cùng	phân	khúc	khi	vô	-	lăng	dạng	d	-	cut	thể_thao	bọc	da	1	2	2	0	0	0	3	4	4	4	0	0	0	0	0	0	0	0	0	0	0
+30	mặc_dù	sở_hữu	hệ_thống	khung	gầm	tương_tự	nhau	nhưng	suzuki	xl7	2020	được	nhà	sản_xuất	kéo_dài	hơn	mang	đến	cảm_giác	thân	xe	trường	và	thanh_thoát	hơn	những	gì	ertiga	đang	thể_hiện	0	0	0	0	0	0	0	0	1	2	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0
+19	mâm	xe	của	spark	lt	bé	hơn	1	chút	so	với	morning	s	khi	chỉ	có	kích_thước	là	14inch	0	0	0	1	2	0	0	0	0	0	0	3	4	0	0	0	0	0	0
+31	về	khả_năng	chiếu	sáng	,	hyundai	accent	2021	sử_dụng	hệ_thống	đèn_pha	halogen	projector	nên	hiệu_năng	mang	lại	là	kém_cạnh	hơn	so	với	dàn	đèn	công_nghệ	led	hiện_đại	trên	toyota	vios	2021	0	0	0	0	0	1	2	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	4	4
+24	so_sánh	các	thông_số	kích_thước	có_thể	thấy	hai	mẫu	xe	khá	tương_đồng	,	mirage	có	phần	nhỉnh	hơn	một_chút	nhưng	sự	chênh_lệch	là	không	lớn	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0
