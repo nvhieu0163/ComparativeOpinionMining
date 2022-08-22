@@ -1,7 +1,8 @@
 from typing import List
 import pandas as pd
 
-from classes.CSI_AC_SP_classes import InputObject, OutputObject
+from classes.task_class import InputObject, OutputObject
+from classes.preprocessing_class import IBOInputObject
 
 # CSI TASK
 # load file need 1 column input, 1 column output
@@ -63,7 +64,10 @@ def load_stc_multilabel_data(
 
     return inputs, outputs
 
-
+# SP TASK
+# INPUT: df: column: sentence, label1, label2,...,label n
+# OUTPUT: TUPLE ( [LIST SENTENCE],[Label_1 score]; [LIST SENTENCE],[Label_2 score]; ... [LIST SENTENCE],[Label_n score]) 
+# list of sub sentence of IN
 def load_polarity_data(
         path: str,
         stc_idx_col_name: str,
@@ -90,3 +94,28 @@ def load_polarity_data(
 
 
     return inputs, outputs
+
+
+#IBO TasK
+def load_IBO_task_data(
+        path: str,
+        stc_idx_col_name: str,
+        stc_col_name: str,
+        sub_col_name: str,
+        obj_col_name: str) -> object:
+    
+    inputs = []
+
+    df = pd.read_csv(path)
+    
+    df = df.fillna('undefined')
+
+    for _, row in df.iterrows():
+        stc_idx = row[stc_idx_col_name]
+        stc = row[stc_col_name].strip()
+        subject = row[sub_col_name].strip()
+        object = row[obj_col_name].strip()
+
+        inputs.append(IBOInputObject(stc_idx, stc, subject, object))
+    
+    return inputs
