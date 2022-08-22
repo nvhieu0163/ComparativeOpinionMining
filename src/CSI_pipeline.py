@@ -6,7 +6,7 @@ from imblearn.over_sampling import RandomOverSampler
 from lightgbm import LGBMClassifier
 
 from model.CSImodel import ComparativeSentenceModel
-from modules.load_data.CSI_AC_SP_load_data import load_stc_data
+from modules.load_data.load_task_data import load_stc_data
 
 from config import CSI_TEST_PATH, CSI_TRAIN_PATH
 

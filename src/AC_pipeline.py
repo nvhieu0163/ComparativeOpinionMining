@@ -6,7 +6,7 @@ from imblearn.over_sampling import RandomOverSampler
 from lightgbm import LGBMClassifier
 
 from model.ACmodel import AspectClassificationModel
-from modules.load_data.CSI_AC_SP_load_data import load_stc_multilabel_data
+from modules.load_data.load_task_data import load_stc_multilabel_data
 
 from config import AC_TEST_PATH, AC_TRAIN_PATH, AC_LABEL_LIST
 

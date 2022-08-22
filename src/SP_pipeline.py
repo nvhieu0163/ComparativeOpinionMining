@@ -7,7 +7,7 @@ from imblearn.over_sampling import RandomOverSampler
 from lightgbm import LGBMClassifier
 
 from model.SP_model import SentimentPolarizationModel 
-from modules.load_data.CSI_AC_SP_load_data import load_polarity_data
+from modules.load_data.load_task_data import load_polarity_data
 
 from config import SP_TEST_PATH, SP_TRAIN_PATH, SP_LABEL_LIST
 
