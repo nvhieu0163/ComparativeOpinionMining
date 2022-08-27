@@ -53,6 +53,15 @@ def evaluate_SP_chi2(aspect, X_test, y_test, model, tunning_threshold=True, save
     # test_df['predict0'] = predict
     # test_df.to_csv('data/output/test_data/CSI/chi2_test_k_{}.csv'.format(k_best))
     
+    list_test_stcs = []
+
+    for _input in X_test:
+        list_test_stcs.append(_input.stc)
+
+    diff_df = pd.DataFrame( {'sentence' : list_test_stcs, 'true': _y_test, 'predict': predict})
+    new_df = diff_df[diff_df["true"] != diff_df["predict"]]
+    new_df.to_csv('SP_{}_differency.csv'.format(aspect))
+
     #evaluate
     neg_p, neg_r, neg_f1 = model.get_evaluate(_y_test, predict, 1)
     neu_p, neu_r, neu_f1 = model.get_evaluate(_y_test, predict, 2)

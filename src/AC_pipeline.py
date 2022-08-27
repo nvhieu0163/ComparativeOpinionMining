@@ -51,6 +51,15 @@ def evaluate_AC_chi2(aspect, X_test, y_test, model, tunning_threshold=True, save
     # test_df['predict0'] = predict
     # test_df.to_csv('data/output/test_data/CSI/chi2_test_k_{}.csv'.format(k_best))
     
+    #export_differency
+    list_test_stcs = []
+
+    for _input in X_test:
+        list_test_stcs.append(_input.stc)
+
+    diff_df = pd.DataFrame( {'sentence' : list_test_stcs, 'true': _y_test, 'predict': predict})
+    diff_df.to_csv('AC_{}_differency.csv'.format(aspect))
+
     #evaluate
     p, r, f1 = model.get_evaluate(_y_test, predict)
     
