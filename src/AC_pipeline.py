@@ -51,14 +51,19 @@ def evaluate_AC_chi2(aspect, X_test, y_test, model, tunning_threshold=True, save
     # test_df['predict0'] = predict
     # test_df.to_csv('data/output/test_data/CSI/chi2_test_k_{}.csv'.format(k_best))
     
-    #export_differency
+    #export differency between predicted and label
     list_test_stcs = []
 
     for _input in X_test:
         list_test_stcs.append(_input.stc)
 
-    diff_df = pd.DataFrame( {'sentence' : list_test_stcs, 'true': _y_test, 'predict': predict})
-    diff_df.to_csv('AC_{}_differency.csv'.format(aspect))
+    df = pd.DataFrame( {'sentence' : list_test_stcs, 'label': _y_test, 'predict': predict})
+    
+    diff_df_1_0 = df[df['label'] == 1 & df['predict'] == 0]
+    diff_df_0_1 = df[df['label'] == 0 & df['predict'] == 1]
+
+    diff_df_0_1.append(diff_df_1_0)
+    diff_df_0_1.to_csv('./dataset/output/differency/AC_{}_differency.csv'.format(aspect))
 
     #evaluate
     p, r, f1 = model.get_evaluate(_y_test, predict)
@@ -82,7 +87,6 @@ def evaluate_AC_chi2(aspect, X_test, y_test, model, tunning_threshold=True, save
 
 
 if __name__ == '__main__':
-    
     # load data
     # return: X_train: List of sentence, Y_train: list of <list>: label for each aspect
     X_train, y_train = load_stc_multilabel_data(AC_TRAIN_PATH, 'sentence_idx', 'stc', AC_LABEL_LIST)
@@ -92,7 +96,7 @@ if __name__ == '__main__':
     k_best = 3000
     base_model = LGBMClassifier()
 
-    #
+    #get overall benchmark
     f1 = []
     p = []
     r = []

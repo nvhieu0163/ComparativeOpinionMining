@@ -8,11 +8,12 @@ from lightgbm import LGBMClassifier
 
 from model.SP_model import SentimentPolarizationModel 
 from modules.load_data.load_task_data import load_polarity_data
+from modules.preprocessing import tag_IBO
 
 from config import SP_TEST_PATH, SP_TRAIN_PATH, SP_LABEL_LIST
 
 
-def train_SP_chi2(aspect, k_best, X_train, y_train, model, oversampling=True, is_save_model = False):
+def train_SP_chi2(aspect, k_best, X_train, y_train, model, oversampling = True, is_save_model = False):
     #set vocab from vocab_path with parameter: k_best
     model.set_vocab_chi2(k_best)
     
@@ -50,17 +51,16 @@ def evaluate_SP_chi2(aspect, X_test, y_test, model, tunning_threshold=True, save
     
     #predcit
     predict = model.predict(_X_test)
-    # test_df['predict0'] = predict
-    # test_df.to_csv('data/output/test_data/CSI/chi2_test_k_{}.csv'.format(k_best))
     
+    #export differency label - predict
     list_test_stcs = []
 
     for _input in X_test:
         list_test_stcs.append(_input.stc)
 
-    diff_df = pd.DataFrame( {'sentence' : list_test_stcs, 'true': _y_test, 'predict': predict})
-    new_df = diff_df[diff_df["true"] != diff_df["predict"]]
-    new_df.to_csv('SP_{}_differency.csv'.format(aspect))
+    df = pd.DataFrame( {'sentence' : list_test_stcs, 'label': _y_test, 'predict': predict})
+    diff_df = df[df["label"] != df["predict"]]
+    diff_df.to_csv('.dataset/output/differency/SP_{}_differency.csv'.format(aspect))
 
     #evaluate
     neg_p, neg_r, neg_f1 = model.get_evaluate(_y_test, predict, 1)
@@ -85,7 +85,6 @@ def evaluate_SP_chi2(aspect, X_test, y_test, model, tunning_threshold=True, save
 
 
 if __name__ == '__main__':
-    
     # load data
     # return: X_train: list of <list>:sentence for each aspect, Y_train: list of <list>:label for each aspect
     X_train, y_train = load_polarity_data(SP_TRAIN_PATH, 'sentence_idx', 'stc', SP_LABEL_LIST)
@@ -95,7 +94,7 @@ if __name__ == '__main__':
     k_best = 3000
     base_model = LGBMClassifier()
 
-    #
+    #overall evaluate
     neg_f1 = []
     pos_f1 = []
     neu_f1 = []
